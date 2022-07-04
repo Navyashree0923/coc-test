@@ -13,7 +13,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
         return
     }
 
-    const jarFound = glob.sync('/(root|home)/**/camel-lsp-server-*.jar')
+    const jarFound = glob.sync('**/camel-lsp-server-*.jar')
     const jarPath = path.resolve(jarFound[0])
 
     const serverOptions = {
